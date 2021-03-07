@@ -237,7 +237,7 @@ main #email-sign-up .email-sign-up-box{
 	border-radius: 12px;
 	padding: 50px 40px;
 	text-align: center;
-	max-width: 75%;
+	max-width: 80%;
 
 }
 
@@ -251,52 +251,125 @@ main .email-sign-up-box h3{
 main #email-sign-up-form {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 main .email-sign-up-box #email-sign-up-form input[type="email"]{
 	text-align: left;
 	border-radius: 40px;
 	border: none;
-	padding: 20px 80px;
+	padding: 20px 60px;
 	color: #aaa;
 	background-color: hsl(0, 0%, 100%);
 	margin-top: 40px;
+	margin-right: 20px;
 }
 
 main #email-sign-up-form .button{
 	font-size: 1.2em;
-	padding: 20px 60px;
+	padding: 20px 50px;
 }
 
 
 /* FOOTER */
 
+.main-footer{
+	background-color: hsl(216, 53%, 9%);
+	padding-top: 50px;
+	position: relative;
+}
+
 footer .footer-content{
+	margin-top: 30px;
+	display: grid;
+	grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+	
+	
+}
+
+footer .footer-content .footer-location{
+	position: relative;
+	width: 25%;
+
+}
+
+.footer-content img{
+	height: 15px;
+	margin-right: 20px;
+}
+
+#fylo-location{
+	grid-row: 1 / 6;
+}
+
+#fylo-location p{
+	position: absolute;
+	display: inline;
+	top: 0;
+	left:0;
+}
+
+#fylo-contact{
+	grid-area: 1 / 2 / 6 / 1
+}
+
+footer .fylo-contact span.contact-group{
+	display: inline-block;
+	margin-bottom: 8px;
+	padding: 0 20px;
+}
+
+
+footer .footer-nav{
+	width: 15%;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 50px;
-}
-
-footer .footer-content div{
-	flex-basis: 300px;
 
 }
 
-footer #footer-nav ul{
+footer a{
+	color: hsl(0, 0%, 100%);
+	padding: 0 20px;
+}
+
+footer a:hover{
+	color: hsl(198, 60%, 50%);
+	font-size: 1.2em;
+}
+
+.footer-nav ul li{
 	list-style: none;
+	display: block;
+}
+
+
+.footer-socials{
+	grid-row: 1 / span 1;
+	grid-column: 4 / span 3;
+	margin-top: 60px;
+}
+
+.footer-socials li{
+	list-style: none;
+	display: inline;
+	border: 2px solid hsl(0, 0%, 100%);
+	box-sizing: border-box;
+	height: 32px;
+	width: 32px;
+	border-radius: 60px;
+	margin-left: 10px;
 }
 
 /* MEDIA QUERIES */
 
 
-@media all and (max-width: 980px){
+@media all and (max-width: 800px){
 	header{
 		background-image: url('../images/bg-curvy-mobile.svg');
 		background-position: bottom 40%;
 		background-size: 150%;
 	}
-	#header-nav .fylo-logo img{
+	.fylo-logo img{
 		width: 120px;
 	}
 	#header-nav ul.nav-menu{
@@ -347,11 +420,48 @@ footer #footer-nav ul{
 
 	main .email-sign-up-box #email-sign-up-form input[type="email"]{
 		font-size: 1.1em;	
+		margin-right: 0;
 	}
 
 	footer .footer-content{
 		flex-direction: column;	
 		justify-content: center;
 	}
+
+	footer .footer-content .footer-location{
+		width: 100%;
+	}
+	.footer-content img{
+		margin-right: 8px;
+	}
+
+	#fylo-location p{
+		font-size: 11px;
+		padding-left: 28px;
+	}
+	footer .fylo-contact{
+		margin-top: 40px;
+	}
+
+	footer .fylo-contact span.contact-group{
+		font-size: 13px;
+	}
+	footer .footer-nav{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-around;
+
+	}
+
+	.footer-socials {
+		display: block;
+		margin: auto;
+	}
+
+	.footer-socials li:first-child{
+		margin-left: 0;
+	}
+
 }
 
