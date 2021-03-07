@@ -273,10 +273,13 @@ main #email-sign-up-form .button{
 
 /* FOOTER */
 
+footer{
+	height: 200px;
+}
+
 .main-footer{
 	background-color: hsl(216, 53%, 9%);
 	padding-top: 50px;
-	position: relative;
 }
 
 footer .footer-content{
@@ -288,8 +291,8 @@ footer .footer-content{
 }
 
 footer .footer-content .footer-location{
-	position: relative;
 	width: 25%;
+	
 
 }
 
@@ -303,7 +306,6 @@ footer .footer-content .footer-location{
 }
 
 #fylo-location p{
-	position: absolute;
 	display: inline;
 	top: 0;
 	left:0;
@@ -357,8 +359,17 @@ footer a:hover{
 	height: 32px;
 	width: 32px;
 	border-radius: 60px;
-	margin-left: 10px;
+	
 }
+
+.frontendmentor-footer{
+	position: fixed;
+	bottom: 20px;
+	height: 20px;
+}
+
+.attribution { font-size: 20px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 /* MEDIA QUERIES */
 
