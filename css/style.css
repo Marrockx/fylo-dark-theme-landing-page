@@ -12,11 +12,21 @@ body{
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	font-weight: 400;
 	color: hsl(0, 0%, 100%);
-	overflow: auto;
 }
 
 body a{
 	text-decoration: none;
+}
+
+/* PAGE CONTAINERS AND WRAP */
+
+#page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
+#content-wrap {
+	padding-bottom: 2.5rem;    /* Footer height */
 }
 
 /* Global Rules */
@@ -30,13 +40,17 @@ body a{
 .button {
 	border-radius: 40px;
 	border: none;
-	padding: 20px 120px;
+	padding: 16px 72px;
 	color: hsl(0, 0%, 100%);
-	font-size: 1.6em;
+	font-size: 1.2em;
 	font-family: Raleway;
 	font-weight: 700;
 	background-color: hsl(176, 68%, 64%);
 	margin-top: 40px;
+}
+
+.button:hover{
+	background-color: hsl(198, 60%, 50%);
 }
 
 .fylo-logo img{
@@ -46,7 +60,7 @@ body a{
 
 header{
 	background-color: hsl(217, 28%, 15%);
-	width: 100vw;
+	width: 100%;
 	background-image: url('../images/bg-curvy-desktop.svg');
 	background-position: bottom center;
 	background-size: 100%;
@@ -60,7 +74,7 @@ header{
 #header-nav ul.nav-menu{
 	list-style: none;
 	font-weight: 400;
-	font-size: 1.7em;
+	font-size: 1.2em;
 	font-family: Raleway, sans-serif;
 	display: flex;
 	margin-top: -44px;
@@ -76,16 +90,19 @@ header{
 	color: hsl(0, 0%, 100%);
 }
 
+#header-nav .nav-menu a:hover{
+	border-bottom: 2px solid hsl(176, 68%, 64%);
+}
+
 #header-nav .nav-menu a:active{
-	color: ;
+	color: hsl(176, 68%, 64%);
 }
 
 /* Header Intro Content */
 
 header .header-intro{
 	text-align: center;
-	margin: 100px auto 0;
-	width: 70%;
+	margin: 100px auto ;
 	padding: 0 100px;
 
 }
@@ -101,14 +118,16 @@ header .header-intro h1{
 	font-family: Raleway;
 	font-weight: 700;
 	font-weight: bold;
-	font-size: 3em; 
+	font-size: 2.4em; 
 	line-height: 1.4em;
-	margin: 40px 0;
+	width: 75%;
+	padding: 0 40px;
+	margin: 40px auto;
 }
 
 header .header-intro  p{
-	font-size: 1.6em;
-	padding: 0 36px;
+	font-size: 1.1em;
+	padding: 0 100px;
 }
 
 /* MAIN */
@@ -122,20 +141,20 @@ main #features .features-container{
 	max-width: 75%;
 	display: grid;
 	grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-	grid-gap: 6em;
+	grid-gap: 8em;
 }
 
 main #features .features-container img{
 	height: 65px;
-	margin-bottom: 24px;
+	margin-bottom: 28px;
 }
 
 main #features .features-container h3{
 	font-family: Raleway;
 	font-weight: 700;
-	font-size: 2em;
+	font-size: 1.6em;
 	line-height: 1.4em;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 
 }
 
@@ -147,23 +166,26 @@ main #fylo-description .description-container{
 	justify-content: space-between;
 	align-items: center;
 	
+	
 }
 
 main .description-container img.description-image{
 	width: 100%;
-	max-width: 50vw;
+	max-width: 40vw;
 	height: auto;
+	padding-right: 20px;
 }
 
 main .description-container .description-content h2{
 	font-family: Raleway;
 	font-weight: 700;
-	font-size: 2.4em;
+	font-size: 2.2em;
 	line-height: 1.6em;
 }
 
 main .description-container .description-content p{
 	padding: 16px 0;
+	text-align: left;
 }
 
 main .description-content .links-feedback{
@@ -194,6 +216,10 @@ main .testimonial-container .testimonial-card{
 	padding: 40px 30px;
 	border-radius: 8px;
 	margin: 20px 20px;
+}
+
+.testimonial-card:hover{
+	box-shadow: 0px 2px 4px 1px hsl(176, 68%, 34%);
 }
 
 main .testimonial-card .testimonial-author{
@@ -227,7 +253,8 @@ main .testimonial-author-title{
 /* EMAIL SIGN-UP */
 
 main #email-sign-up{
-	
+	max-width: 80%;
+	margin: auto;
 }
 
 main #email-sign-up .email-sign-up-box{
@@ -237,13 +264,12 @@ main #email-sign-up .email-sign-up-box{
 	border-radius: 12px;
 	padding: 50px 40px;
 	text-align: center;
-	max-width: 80%;
 
 }
 
 main .email-sign-up-box h3{
 	font-family: Raleway;
-	font-size: 2.4em;
+	font-size: 1.8em;
 	font-weight: 700;
 	margin-bottom: 28px;
 }
@@ -258,39 +284,47 @@ main .email-sign-up-box #email-sign-up-form input[type="email"]{
 	text-align: left;
 	border-radius: 40px;
 	border: none;
-	padding: 20px 60px;
+	padding: 16px 60px;
 	color: #aaa;
 	background-color: hsl(0, 0%, 100%);
 	margin-top: 40px;
 	margin-right: 20px;
+	width: 800px;
+}
+
+main .email-sign-up-box #email-sign-up-form input[type="email"]:focus{
+
 }
 
 main #email-sign-up-form .button{
-	font-size: 1.2em;
-	padding: 20px 50px;
+	padding: 8px 40px;
+	font-size: 1em;
 }
 
 
 /* FOOTER */
 
-footer{
-	height: 200px;
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;            /* Footer height */
 }
 
 .main-footer{
+	position: relative;
 	background-color: hsl(216, 53%, 9%);
 	padding-top: 50px;
 }
 
-footer .footer-content{
+#footer .footer-content{
 	margin-top: 30px;
-	display: grid;
-	grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+	display: flex;
 	
 	
 }
 
-footer .footer-content .footer-location{
+#footer .footer-content .footer-location{
 	width: 25%;
 	
 
@@ -302,7 +336,7 @@ footer .footer-content .footer-location{
 }
 
 #fylo-location{
-	grid-row: 1 / 6;
+
 }
 
 #fylo-location p{
@@ -312,29 +346,29 @@ footer .footer-content .footer-location{
 }
 
 #fylo-contact{
-	grid-area: 1 / 2 / 6 / 1
+	
 }
 
-footer .fylo-contact span.contact-group{
+#footer .fylo-contact span.contact-group{
 	display: inline-block;
 	margin-bottom: 8px;
 	padding: 0 20px;
 }
 
 
-footer .footer-nav{
+#footer .footer-nav{
 	width: 15%;
 	display: flex;
 	justify-content: space-between;
 
 }
 
-footer a{
+#footer a{
 	color: hsl(0, 0%, 100%);
 	padding: 0 20px;
 }
 
-footer a:hover{
+#footer a:hover{
 	color: hsl(198, 60%, 50%);
 	font-size: 1.2em;
 }
@@ -363,7 +397,7 @@ footer a:hover{
 }
 
 .frontendmentor-footer{
-	position: fixed;
+	position: static;
 	bottom: 20px;
 	height: 20px;
 }
@@ -373,8 +407,20 @@ footer a:hover{
 
 /* MEDIA QUERIES */
 
-
 @media all and (max-width: 800px){
+	main #fylo-testimonials .testimonial-container {
+		flex-wrap: wrap;
+	}
+
+	main .testimonial-container .testimonial-card{
+		max-width: 75vw;
+	}
+}
+
+@media all and (max-width: 750px){
+	#page-container {
+		min-height: 100%;
+	}
 	header{
 		background-image: url('../images/bg-curvy-mobile.svg');
 		background-position: bottom 40%;
@@ -391,88 +437,108 @@ footer a:hover{
 		padding-left: 16px;
 	}
 	.header-intro a .button{
-		font-size: 1.2em;
-	}
-	main #features .features-container{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}	
-	main #fylo-description .description-container{
-		flex-flow: row wrap;
-		justify-content: center;
-		align-items: center;
+		font-size: 1em;
+		padding: 12px 44px;
 	}
 
-	main #fylo-description .description-container img.description-image{
-		max-width: 70vw;
-		margin-bottom: 50px;
-	}
+	header .header-intro h1{
+		font-size: 2em; 
+		line-height: 1.4em;
+/*	width: 75%;
+	padding: 0 40px;
+	margin: 40px auto;*/
+}
 
-	main #fylo-description .description-content h2{
-		text-align: center;
-	}
+header .header-intro  p{
+	font-size: 1.1em;
+	padding: 0 25px;
+}
 
-	main #fylo-testimonials .testimonial-container {
-		flex-wrap: wrap;
-	}
 
-	main .testimonial-container .testimonial-card{
-		max-width: 75vw;
-	}
+main #features .features-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}	
+main #fylo-description .description-container{
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
 
-	main #email-sign-up-form {
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-	main .email-sign-up-box #email-sign-up-form input[type="email"] , main #email-sign-up-form .button{
-		padding: 20px 120px;
-	}
+main #fylo-description .description-container img.description-image{
+	max-width: 65vw;
+	padding-right: 0;
+	margin-bottom: 50px;
+}
 
-	main .email-sign-up-box #email-sign-up-form input[type="email"]{
-		font-size: 1.1em;	
-		margin-right: 0;
-	}
+main .description-container .description-content{
+	text-align: center;
+	margin: auto;
+}
 
-	footer .footer-content{
-		flex-direction: column;	
-		justify-content: center;
-	}
+main #fylo-description .description-content h2{
+	text-align: center;
+}
 
-	footer .footer-content .footer-location{
-		width: 100%;
-	}
-	.footer-content img{
-		margin-right: 8px;
-	}
+main #email-sign-up-form {
+	flex-flow: column wrap;
+	justify-content: center;
+	margin: auto;
+}
+main .email-sign-up-box #email-sign-up-form input[type="email"] , main #email-sign-up-form .button{
+	padding: 10px 20px;
+	font-size: 1em;
+}
 
-	#fylo-location p{
-		font-size: 11px;
-		padding-left: 28px;
-	}
-	footer .fylo-contact{
-		margin-top: 40px;
-	}
+main .email-sign-up-box #email-sign-up-form input[type="email"]{
+	margin-right: 0;
+	width: auto;
+}
 
-	footer .fylo-contact span.contact-group{
-		font-size: 13px;
-	}
-	footer .footer-nav{
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		justify-content: space-around;
+main .email-sign-up-box .button{
 
-	}
+}
 
-	.footer-socials {
-		display: block;
-		margin: auto;
-	}
+footer .footer-content{
+	flex-direction: column;	
+	justify-content: center;
+}
 
-	.footer-socials li:first-child{
-		margin-left: 0;
-	}
+footer .footer-content .footer-location{
+	width: 100%;
+}
+.footer-content img{
+	margin-right: 8px;
+}
+
+#fylo-location p{
+	font-size: 11px;
+	padding-left: 28px;
+}
+footer .fylo-contact{
+	margin-top: 40px;
+}
+
+footer .fylo-contact span.contact-group{
+	font-size: 13px;
+}
+footer .footer-nav{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: space-around;
+
+}
+
+.footer-socials {
+	display: block;
+	margin: auto;
+}
+
+.footer-socials li:first-child{
+	margin-left: 0;
+}
 
 }
 
